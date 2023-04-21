@@ -4,6 +4,7 @@ for this it has two parameters one is input parameer its either employee id or e
 and out parameter is of cursor type and it contains output result
 
 */
+
 CREATE OR REPLACE PROCEDURE sp_search_employee(colvalue IN VARCHAR2,c_cur OUT SYS_REFCURSOR,o_message out varchar2) 
 IS  
     --NO_DATA_FOUND exception;
