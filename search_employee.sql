@@ -2,7 +2,6 @@
 Search of an employee
 for this it has two parameters one is input parameer its either employee id or employee name or employee mail id
 and out parameter is of cursor type and it contains output result
-
 */
 
 CREATE OR REPLACE PROCEDURE sp_search_employee(colvalue IN VARCHAR2,c_cur OUT SYS_REFCURSOR,o_message out varchar2) 
@@ -40,7 +39,6 @@ BEGIN
 IF c_cur%notfound THEN
     o_message:='No data found!';
 END IF;
-
 END;
 /
 
@@ -83,7 +81,7 @@ END;
 exec sp_execute_employee('&enter_search_key');
 select * from employees_info;
 
-
+set serveroutput on;
 /*
 --Named PLSQL Block with output 
 create or replace procedure sp_search_test_demo(colvalue varchar2)
@@ -148,4 +146,13 @@ EXCEPTION
 END;
 /
 exec sp_search_test_demo('@gmail');
+*/
+
+/*
+Description of log error:
+seq 373 
+source : o.d.rbackground task 
+msg: sys expried 0.001 sec ago
+this comment sould be delted once the issue is resloved 
+ 
 */
